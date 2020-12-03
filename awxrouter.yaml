@@ -1,0 +1,14 @@
+---
+- name: Getting Started With Automation
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: SHOW COMMANDS
+      ios_command:
+        commands:
+         - show ip protocol
+         - show ip route
+      register: output
+    - debug: var=output.stdout_lines
+
