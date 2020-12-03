@@ -9,7 +9,7 @@
         commands:
          - show ver | sec IOS
          - show ip int brief 
-         - show ip arp
+         - show ip route
       register: output
     - debug: var=output.stdout_lines
 
