@@ -7,7 +7,7 @@
     - name: SHOW COMMANDS
       ios_command:
         commands:
-         - show run | sec IOS
+         - show ver | sec IOS
          - show ip int brief | ex un
       register: output
     - debug: var=output.stdout_lines
