@@ -7,8 +7,8 @@
     - name: SHOW COMMANDS
       ios_command:
         commands:
-         - show ip protocol
-         - show ip route
+         - show run | sec IOS
+         - show ip int brief | ex un
       register: output
     - debug: var=output.stdout_lines
 
