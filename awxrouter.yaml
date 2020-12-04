@@ -1,6 +1,6 @@
 ---
 - name: Getting Started With Automation
-  hosts: 172.16.118.134
+  hosts: all
   gather_facts: false
 
   tasks:
