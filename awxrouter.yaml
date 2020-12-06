@@ -1,10 +1,10 @@
 ---
-- name: Getting Started With Automation
+- name: Running From My GitHub Repository
   hosts: all
   gather_facts: false
 
   tasks:
-    - name: SHOW COMMANDS
+    - name: Show IOS Version & Show Route
       ios_command:
         commands:
          - show version | sec IOS
