@@ -9,6 +9,7 @@
         commands:
          - show ip int brief | ex un
          - show run | sec router
+         - show ip arp
       register: output
     - debug: var=output.stdout_lines
 
