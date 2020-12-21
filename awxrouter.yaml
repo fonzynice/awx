@@ -7,8 +7,8 @@
     - name: Show IOS Version & Show Route
       ios_command:
         commands:
-         - show ip int brief 
-         - show run | sec router
+         - show ip int brief
+         - show run | sec IOS
       register: output
     - debug: var=output.stdout_lines
 
