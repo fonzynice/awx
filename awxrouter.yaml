@@ -7,6 +7,12 @@
     - name: Show IOS Version & Show Route
       ios_command:
         commands:
+<<<<<<< HEAD
+=======
+         - show ip int brief
+         - show run | sec IOS
+
+>>>>>>> updated
          - show ip int brief | ex un
          - show run | sec router
          - show ip arp
