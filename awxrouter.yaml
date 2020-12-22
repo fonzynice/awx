@@ -9,7 +9,7 @@
         commands:
          - show ip int brief | ex un
          - show ip eigrp interface
-         - show ip route
+         - ping 172.16.1.1
 
       register: output
     - debug: var=output.stdout_lines
