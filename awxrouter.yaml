@@ -1,14 +1,16 @@
 ---
-- name: Running From My GitHub Repository
-  hosts: all
-  gather_facts: false
+- name: configure interfaces on cisco dmvpn rtrs
+  hosts: rtrs
+ # gather_facts: false
 
   tasks:
-    - name: Show IOS Version & Show Route
-      ios_command:
-        commands:
-         - show ip int brief | ex un
-         - show ip eigrp interface
+    cisco.ios.ios_l3_interfaces:
+      config:
+      - name: Loopback100
+        ipvv4:
+        - address: 100.100.100.1/24
+    
+   
 
       register: output
     - debug: var=output.stdout_lines
