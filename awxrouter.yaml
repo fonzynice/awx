@@ -9,9 +9,7 @@
       - name: Loopback100
         ipvv4:
         - address: 100.100.100.1/24
-    
-   
-
-      register: output
-    - debug: var=output.stdout_lines
+        
+     #register: output
+  # - debug: var=output.stdout_lines
 
