@@ -1,21 +1,30 @@
 ---
-- name: Example of facts being pushed right back to device.
-  hosts: rtrs
-  gather_facts: false
+- hosts: rtrs
+  gather_facts: no
   tasks:
-    - name: grab arista eos facts
-      ios_facts:
-        gather_subset: min
-        gather_network_resources: l3_interfaces
+    - ios_config:
+        lines:
+          - no shutdown
+        parents: interface FastEthernet4/0
+        
+        
+# - name: Example of facts being pushed right back to device.
+#   hosts: rtrs
+#   gather_facts: false
+#   tasks:
+#     - name: grab arista eos facts
+#       ios_facts:
+#         gather_subset: min
+#         gather_network_resources: l3_interfaces
 
-- name: Ensure that the IP address information is accurate.
-  ios_l3_interfaces:
-    config: "{{ ansible_network_resources['l3_interfaces'] }}"
-    register: result
+# - name: Ensure that the IP address information is accurate.
+#   ios_l3_interfaces:
+#     config: "{{ ansible_network_resources['l3_interfaces'] }}"
+#     register: result
 
-- name: Ensure config did not change.
-  assert:
-    that: not result.changed
+# - name: Ensure config did not change.
+#   assert:
+#     that: not result.changed
 
 
         
