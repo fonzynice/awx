@@ -1,5 +1,5 @@
 ---
-- hosts: rtrs
+- hosts: HUB
   gather_facts: no
   tasks:
     - ios_config:
