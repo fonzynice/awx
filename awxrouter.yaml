@@ -11,7 +11,7 @@
 
     - name: Display the config
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the IOS-version-number is {{ ansible_net_version }}"
+        msg: "The hostname is {{ ansible_net_hostname }} and the IOS is {{ ansible_net_version }}"
         
      #register: output
   # - debug: var=output.stdout_lines
