@@ -13,7 +13,7 @@
       cisco.ios.ios_command:
         commands:
         - show ip int brief
-        - show ip eigrp interface brief
+        - show ip eigrp interface 
 
 
     # - name: Display the config
