@@ -14,7 +14,7 @@
         commands:
         - show ip int brief
         - show ip eigrp interface 
-        - show ver | sec IOS
+        - show verion | sec IOS
 
 
     # - name: Display the config
