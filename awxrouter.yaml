@@ -2,17 +2,24 @@
 - name: Network Getting Started First Playbook
   connection: ansible.netcommon.network_cli
   gather_facts: false
-  hosts: HUB
+  hosts: all
   tasks:
 
     - name: Get config for IOS devices
       cisco.ios.ios_facts:
         gather_subset: all
 
-    - name: Display the config
-      debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the IOS-XE is {{ ansible_net_version }}"
+    - name: SHOW IP INTERFACES
+      cisco.ios.ios_command:
+        commands:
+        - show ip int brief
+        - show ip eigrp interface brief
+
+
+    # - name: Display the config
+    #   debug:
+    #     msg: "The hostname is {{ ansible_net_hostname }} and the IOS is {{ ansible_net_version }}"
         
-     #register: output
-  # - debug: var=output.stdout_lines
+      register: output
+    - debug: var=output.stdout_lines
 
