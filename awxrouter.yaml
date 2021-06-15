@@ -14,7 +14,7 @@
         commands:
         - show ip int brief
         - show ip eigrp interface
-        - show clock
+
         
 
 
