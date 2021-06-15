@@ -25,5 +25,5 @@
         
       register: output
     - name: SHOW DEBUG
-    - debug: var=output.stdout_lines
+      debug: var=output.stdout_lines
 
