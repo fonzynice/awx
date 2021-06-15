@@ -12,8 +12,8 @@
     - name: SHOW IP INTERFACES
       cisco.ios.ios_command:
         commands:
-        - show ip int brief
-        - show ip eigrp interface
+        - show clock
+
 
         
 
