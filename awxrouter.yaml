@@ -12,7 +12,7 @@
     - name: SHOW IP INTERFACES
       cisco.ios.ios_command:
         commands:
-        - show ip interface brief
+        - show ip int brief
         - show ip eigrp interface 
         
 
