@@ -13,7 +13,7 @@
       cisco.ios.ios_command:
         commands:
         - show clock
-        - show ip ospf nei
+        - show ip ospf neig
 
 
         
