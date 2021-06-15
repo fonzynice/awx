@@ -14,6 +14,7 @@
         commands:
         - show clock
         - show ip ospf nei
+        - show ip route | sec ospf
 
 
         
